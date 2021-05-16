@@ -1,1 +1,0 @@
-web: gunicorn prakritimaddheshiya.WSGI --log-file -
