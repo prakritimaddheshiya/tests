@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { TEST_DETAIL } from "../utils/urls";
 
 const Tests = (props) => {
   const [alert, setAlert] = useState(false);
+  const [response, setResponse] = useState({});
+  const [loaded, setLoaded] = useState(false);
+
+  const id = props.match.params.id;
 
   const copy = (e) => {
     let inputElement = document.createElement("input");
     inputElement.type = "text";
-    let copyText = "www.prakritimaddheshiya.com" + props.location.pathname;
+    let copyText = "www.prakritimaddheshiya.com/test/" + id;
     inputElement.value = copyText;
     document.body.appendChild(inputElement);
     inputElement.select();
@@ -19,10 +25,12 @@ const Tests = (props) => {
     }, 2000);
   };
 
-  const response = {
-    src: "<div align='center' id='liveworksheet1266323' style='width:100%'></div><script src='https://files.liveworksheets.com/embed/embed.js'></script><script language='javascript'>loadliveworksheet(1266323,'agpnncyh',2582,'www',1878796);</script>",
-    title: "Swar Test for LKG-A",
-  };
+  useEffect(() => {
+    axios.get(TEST_DETAIL + id).then((res) => {
+      setResponse(res.data);
+      setLoaded(true);
+    });
+  }, [id]);
 
   return (
     <div className='text-center my-3'>
@@ -38,14 +46,18 @@ const Tests = (props) => {
           Link copied!!!
         </div>
       )}
-      <p className='mt-3 text-skyblue h5 mb-0'>{response.title}</p>
-      <hr className='mt-1 w-25 bg-light' />
-      <iframe
-        srcDoc={response.src}
-        frameBorder='0'
-        style={{ width: "300px", height: "400px" }}
-        title='test'
-      />
+      {loaded && (
+        <>
+          <p className='mt-3 text-skyblue h5 mb-0'>{response.title}</p>
+          <hr className='mt-1 w-25 bg-light' />
+          <iframe
+            srcDoc={response.src}
+            frameBorder='0'
+            style={{ width: "300px", height: "400px" }}
+            title='test'
+          />
+        </>
+      )}
     </div>
   );
 };

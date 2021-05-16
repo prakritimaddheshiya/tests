@@ -18,12 +18,16 @@ const Navbar = () => {
         </Link>
 
         <a
-          className='ml-1'
           href='https://www.youtube.com/channel/UC6Dk0Xn-bx5XyX7NQbgjrng'
           alt='yt-page'
           target='_blank'
           rel='noreferrer'>
-          <i className='fab fa-youtube' />
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png'
+            alt='yt-icon'
+            width='75px'
+            height='50px'
+          />
         </a>
       </div>
     </nav>

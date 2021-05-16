@@ -41,15 +41,6 @@ textarea:focus {
   background-color: #131313 !important;
 }
 
-.fa-youtube {
-  font-size: 30px;
-  color: #da1b0e;
-}
-
-.fa-youtube:hover {
-  color: #be1206;
-}
-
 .navbar-brand {
   font-family: 'Poiret One', cursive;
   font-size: 22px !important;
