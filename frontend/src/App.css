@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 
-:root {
-  --white: #fff;
-  --green: #2ccf6d;
-}
-
 a {
   text-decoration: none !important;
   color: white;
@@ -15,22 +10,6 @@ a {
 body {
   background: #191919 !important;
   font-family: 'Kiwi Maru';
-}
-
-input:focus,
-textarea:focus,
-button:focus {
-  outline: none !important;
-}
-
-
-select {
-  outline: none;
-  cursor: pointer;
-}
-
-svg {
-  width: 100%;
 }
 
 h1 {
@@ -43,68 +22,32 @@ h2 {
   font-weight: bold;
 }
 
+svg {
+  width: 100%;
+}
+
+textarea {
+  resize: none !important;
+  background-color: #131313 !important;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none !important;
+}
+
 .bg-black {
   background-color: #131313 !important;
 }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 40px;
-  background-color: #131313;
-}
-
-.box a {
-  font-size: 16px;
-  color: #05b07d;
-}
-
-.box a:hover {
-  font-size: 18px;
-  color: #0372ad;
-}
-
-.box input,
-.box select {
-  display: block;
-  background: none;
-  text-align: center;
-  color: white;
-  margin: 16px 0;
-  border: 2px solid #3498db;
-  padding: 14px 10px;
-  border-radius: 24px;
-  transition: 0.25s;
-}
-
-.box input:focus,
-.box select:focus {
-  border-color: #2ecc71;
-}
-
 .fa-youtube {
-  font-size: 40px;
+  font-size: 30px;
   color: #da1b0e;
 }
 
 .fa-youtube:hover {
-  font-size: 40px;
   color: #be1206;
-}
-
-.nav-link {
-  font-size: 18px;
-  color: #ffffffbf !important;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: #05b07d !important;
-  outline: none;
 }
 
 .navbar-brand {
@@ -132,11 +75,15 @@ h2 {
   background: #2ecc71;
 }
 
+.text-skyblue {
+  color: #0372ad;
+}
+
 #page404 {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poiret One";
-  color: var(--white);
+  color: #fff;
   font-size: 1em;
 }
