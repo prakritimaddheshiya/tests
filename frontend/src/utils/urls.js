@@ -1,3 +1,3 @@
-export const TEST_CREATE = "http://127.0.0.1:8000/tests/create";
-export const TEST_LIST = "http://127.0.0.1:8000/tests/list";
-export const TEST_DETAIL = "http://127.0.0.1:8000/tests/detail/";
+export const TEST_CREATE = "https://prakritimaddheshiya.herokuapp.com/tests/create";
+export const TEST_LIST = "https://prakritimaddheshiya.herokuapp.com/tests/list";
+export const TEST_DETAIL = "https://prakritimaddheshiya.herokuapp.com/tests/detail/";
